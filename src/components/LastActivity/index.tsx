@@ -12,7 +12,7 @@ type ProgressStatsProps = {
 const ProgressStats: React.FC<ProgressStatsProps> = ({ label, value }) => {
   return (
     <AppCard size="sm">
-      <div className="flex gap-2">
+      <div className="flex items-center justify-center gap-2 min-w-[8rem]">
         <AppTypography>{label}</AppTypography>
         <AppTypography weight="bold">{value}</AppTypography>
       </div>
@@ -53,7 +53,7 @@ const LastActivity: React.FC<LastActivityProps> = ({
           </AppTypography>
         </div>
         <AppProgressBar progress={progress} showProgressLabel={false} />
-        <div className="flex gap-2 justify-between">
+        <div className="flex flex-wrap gap-2 justify-between">
           <ProgressStats label="Due Hrs:" value={dueHrs} />
           <ProgressStats label="Duration" value={duration} />
           <ProgressStats label="Progress" value={`${progress}%`} />

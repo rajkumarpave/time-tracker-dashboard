@@ -31,9 +31,9 @@ type GreetingCardProps = {
 const GreetingCard: React.FC<GreetingCardProps> = ({ username }) => {
   return (
     <div className="flex gap-2">
-      <span className="text-2xl border-1 border-black p-2 rounded-md">
+      <div className="flex items-center justify-center text-2xl border-1 border-black p-2 rounded-md">
         <FaRegUser />
-      </span>
+      </div>
       <div className="flex flex-col">
         <AppTypography>Welcome {username}!</AppTypography>
         <AppTypography variant="caption">
