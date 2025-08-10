@@ -4,6 +4,7 @@ import AppButton from "../AppUI/AppButton";
 import AppTypography from "../AppUI/AppTypography";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import AppVerticalLine from "../AppUI/AppVerticalLine";
+import MobileMenu from "./MobileMenu";
 
 // Define types for the menu list
 interface MenuItem {
@@ -25,7 +26,7 @@ const TopNavBar: React.FC = () => {
 
   return (
     <div className="flex justify-between items-center p-3 px-4">
-      <div className="flex space-x-4 bg-white text-black">
+      <div className="hidden md:flex space-x-4 bg-white text-black">
         {menuList.map((menu, idx) => {
           const isActive = location.pathname === menu.route;
           return (
@@ -38,6 +39,7 @@ const TopNavBar: React.FC = () => {
           );
         })}
       </div>
+      <MobileMenu menuList={menuList} />
       <NavActionButton />
     </div>
   );
