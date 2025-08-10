@@ -18,7 +18,7 @@ const MobileMenu: React.FC<{ menuList: MenuItem[] }> = ({ menuList }) => {
   };
 
   return (
-    <div className="block lg:hidden relative">
+    <div className="block md:hidden relative">
       <div className="p-4 cursor-pointer" onClick={toggleMenu}>
         <FaBars size={30} />
       </div>
