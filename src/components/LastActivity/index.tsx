@@ -37,7 +37,7 @@ const LastActivity: React.FC<LastActivityProps> = ({
 }) => {
   return (
     <AppCard>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 min-h-[205px]">
         <AppTypography variant="subheading" weight="bold">
           Last Activity
         </AppTypography>

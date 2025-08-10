@@ -1,4 +1,3 @@
-import React from "react";
 import AppProgressBar from "../../AppUI/AppProgressBar";
 import AppTypography from "../../AppUI/AppTypography";
 import AppCard from "../../AppUI/AppCard";

@@ -35,6 +35,12 @@ const AppGrid: React.FC<AppGridProps> = ({
   return (
     <>
       <div className={`${gridClasses} ${className}`}>{children}</div>
+      <span className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="bg-blue-500 p-4">Item 1</div>
+        <div className="bg-blue-500 p-4 col-span-4">Item 2</div>
+        <div className="bg-blue-500 p-4">Item 3</div>
+        <div className="bg-blue-500 p-4">Item 4</div>
+      </span>
     </>
   );
 };

@@ -11,7 +11,7 @@ const AppCard: React.FC<AppCardProps> = ({
   size = "base",
   className = "",
 }) => {
-  let baseClass = "p-8";
+  let baseClass = "p-6 m-2";
 
   if (size === "sm") {
     baseClass = "p-2";

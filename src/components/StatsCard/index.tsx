@@ -7,12 +7,19 @@ type StatsCardProps = {
   value: string;
   icon: React.ReactNode;
   description: string;
+  className?: string;
 };
 
-function StatsCard({ title, icon, value, description }: StatsCardProps) {
+function StatsCard({
+  title,
+  icon,
+  value,
+  description,
+  className,
+}: StatsCardProps) {
   return (
     <AppCard>
-      <div className="flex flex-col gap-2">
+      <div className={`flex flex-col gap-2 ${className}`}>
         <div className="flex gap-2 items-center">
           <span className={`p-0.5 border-[1px] border-black text-black`}>
             {icon}

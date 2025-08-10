@@ -1,4 +1,3 @@
-import React from "react";
 import AppCard from "../../AppUI/AppCard";
 import BarChart from "../../Charts/BarChart";
 import AppTypography from "../../AppUI/AppTypography";

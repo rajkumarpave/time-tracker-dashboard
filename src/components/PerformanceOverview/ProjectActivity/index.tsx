@@ -1,4 +1,3 @@
-import React from "react";
 import AppCard from "../../AppUI/AppCard";
 
 import ProjectTask, { type ProjectTaskProps } from "../ProjectTask";
@@ -32,7 +31,7 @@ function ProjectActivity() {
         <AppTypography variant="subheading" weight="bold">
           Project Activity
         </AppTypography>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 h-[300px] overflow-y-auto">
           {taskList.map((task, idx) => (
             <ProjectTask key={idx} {...task} />
           ))}

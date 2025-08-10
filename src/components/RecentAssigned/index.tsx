@@ -1,4 +1,3 @@
-import React from "react";
 import AppTypography from "../AppUI/AppTypography";
 import type { AssignedTaskProps } from "./AssignedTask";
 import AssignedTask from "./AssignedTask";

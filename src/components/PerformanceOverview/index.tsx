@@ -1,11 +1,8 @@
-import React from "react";
 import AppCard from "../AppUI/AppCard";
 import AppTypography from "../AppUI/AppTypography";
 import AppButton from "../AppUI/AppButton";
 import { FiFilter } from "react-icons/fi";
 import ProjectActivity from "./ProjectActivity";
-import AppGrid from "../AppUI/AppGrid";
-import AppGridItem from "../AppUI/AppGrid/AppGridItem";
 import TimeDistribution from "./TimeDistribution";
 
 function PerformanceOverview() {
@@ -20,9 +17,15 @@ function PerformanceOverview() {
             Filter
           </AppButton>
         </div>
-        <ProjectActivity />
+        <div className="flex flex-wrap">
+          <div className="w-[100%] sm:w-[100%] md:w-5/12">
+            <ProjectActivity />
+          </div>
+          <div className="w-[100%] sm:w-[100%] md:w-7/12">
+            <TimeDistribution />
+          </div>
+        </div>
       </div>
-      <TimeDistribution />
     </AppCard>
   );
 }

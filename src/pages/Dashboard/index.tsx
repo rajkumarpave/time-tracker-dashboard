@@ -1,12 +1,9 @@
-import React from "react";
-import AppGrid from "../../components/AppUI/AppGrid";
 import StatsCard from "../../components/StatsCard";
 
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import LastActivity from "../../components/LastActivity";
 import PerformanceOverview from "../../components/PerformanceOverview";
-import AppGridItem from "../../components/AppUI/AppGrid/AppGridItem";
 import RecentAssigned from "../../components/RecentAssigned";
 import UserActionPanel from "../../components/UserActionPanel";
 import BasicLayout from "../../layout/BasicLayout";
@@ -32,8 +29,8 @@ function Dashboard() {
     <>
       <UserActionPanel />
       <BasicLayout>
-        <AppGrid>
-          <AppGridItem sm={12} md={5}>
+        <div className="flex flex-wrap">
+          <div className="w-[100%] sm:w-[100%] md:w-5/12">
             <div className="flex flex-col gap-4">
               <LastActivity
                 projectName="Project Name"
@@ -42,23 +39,26 @@ function Dashboard() {
                 duration="5:55:09"
                 dueHrs="8 Hrs"
               />
-              <AppGrid sm={1} md={2} gap={4}>
+              <div className="flex flex-wrap">
                 {cardList.map((card, idx) => (
-                  <StatsCard
-                    key={idx}
-                    title={card.title}
-                    value={card.value}
-                    description={card.description}
-                    icon={card.icon}
-                  />
+                  <div className="w-[100%] sm:w-[100%] md:w-1/2">
+                    <StatsCard
+                      key={idx}
+                      title={card.title}
+                      value={card.value}
+                      description={card.description}
+                      icon={card.icon}
+                      className="min-h-[180px]"
+                    />
+                  </div>
                 ))}
-              </AppGrid>
+              </div>
             </div>
-          </AppGridItem>
-          <AppGridItem sm={12} md={7}>
+          </div>
+          <div className="w-[100%] sm:w-[100%] md:w-7/12">
             <PerformanceOverview />
-          </AppGridItem>
-        </AppGrid>
+          </div>
+        </div>
         <RecentAssigned />
       </BasicLayout>
     </>
