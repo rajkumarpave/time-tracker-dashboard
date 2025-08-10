@@ -90,6 +90,7 @@ function RecentAssigned() {
             },
           }}
           hideTableHeader
+          disablePagination
         />
       </div>
     </div>
