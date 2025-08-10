@@ -71,28 +71,22 @@ function RecentAssigned() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col gap-2 p-4">
       <AppTypography variant="subheading">Recent Assigned</AppTypography>
-      <div className="flex flex-col gap-2 p-4">
-        {/* {assignedTaskList.map((task, idx) => (
-          <AssignedTask key={idx} {...task} />
-        ))} */}
-
-        <AppTable
-          columns={columns}
-          data={data}
-          tableStyles={{
-            tableRowClassName:
-              "rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer",
-            tableStyle: {
-              borderCollapse: "separate",
-              borderSpacing: "0px 10px",
-            },
-          }}
-          hideTableHeader
-          disablePagination
-        />
-      </div>
+      <AppTable
+        columns={columns}
+        data={data}
+        tableStyles={{
+          tableRowClassName:
+            "rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer",
+          tableStyle: {
+            borderCollapse: "separate",
+            borderSpacing: "0px 10px",
+          },
+        }}
+        hideTableHeader
+        disablePagination
+      />
     </div>
   );
 }
