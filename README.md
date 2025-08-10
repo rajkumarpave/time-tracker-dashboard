@@ -1,4 +1,4 @@
-# HR Dashboard
+# Time Tracker Dashboard
 
 Welcome to the Time Tracker project! This dashboard is built using React JS with Vite bundler, designed to provide an efficient and intuitive interface for Time Tracking tasks such as Task Completion, Project Creation, and analytics.
 
