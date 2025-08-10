@@ -29,37 +29,39 @@ function Dashboard() {
     <>
       <UserActionPanel />
       <BasicLayout>
-        <div className="flex flex-wrap">
-          <div className="w-[100%] sm:w-[100%] md:w-5/12">
-            <div className="flex flex-col gap-4">
-              <LastActivity
-                projectName="Project Name"
-                description="Description"
-                progress={60}
-                duration="5:55:09"
-                dueHrs="8 Hrs"
-              />
-              <div className="flex flex-wrap">
-                {cardList.map((card, idx) => (
-                  <div className="w-[100%] sm:w-[100%] md:w-1/2">
-                    <StatsCard
-                      key={idx}
-                      title={card.title}
-                      value={card.value}
-                      description={card.description}
-                      icon={card.icon}
-                      className="min-h-[180px]"
-                    />
-                  </div>
-                ))}
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap">
+            <div className="w-[100%] sm:w-[100%] md:w-5/12">
+              <div className="flex flex-col gap-4">
+                <LastActivity
+                  projectName="Project Name"
+                  description="Description"
+                  progress={60}
+                  duration="5:55:09"
+                  dueHrs="8 Hrs"
+                />
+                <div className="flex flex-wrap">
+                  {cardList.map((card, idx) => (
+                    <div className="w-[100%] sm:w-[100%] md:w-1/2">
+                      <StatsCard
+                        key={idx}
+                        title={card.title}
+                        value={card.value}
+                        description={card.description}
+                        icon={card.icon}
+                        className="min-h-[180px]"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+            <div className="w-[100%] sm:w-[100%] md:w-7/12">
+              <PerformanceOverview />
+            </div>
           </div>
-          <div className="w-[100%] sm:w-[100%] md:w-7/12">
-            <PerformanceOverview />
-          </div>
+          <RecentAssigned />
         </div>
-        <RecentAssigned />
       </BasicLayout>
     </>
   );

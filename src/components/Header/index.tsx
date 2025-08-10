@@ -8,7 +8,7 @@ import AppVerticalLine from "../AppUI/AppVerticalLine";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-between items-center p-2 px-4 border-0 border-b-[1px] border-black">
+    <div className="flex justify-between items-center p-2 px-6 border-0 border-b-[1px] border-black">
       <div className="flex justify-between items-center gap-1">
         <AppTypography variant="h3">
           <PiBookOpen />

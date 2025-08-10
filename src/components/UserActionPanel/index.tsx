@@ -9,7 +9,7 @@ function UserActionPanel() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-between items-center border-0 border-t-[1px] border-b-[1px] border-black p-2 px-4">
+    <div className="flex justify-between items-center border-0 border-t-[1px] border-b-[1px] border-black p-2 px-6">
       <GreetingCard username="Megala" />
       <AppButton
         size="sm"

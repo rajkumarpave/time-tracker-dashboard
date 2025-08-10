@@ -25,7 +25,7 @@ const TopNavBar: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div className="flex justify-between items-center p-3 px-4">
+    <div className="flex justify-between items-center p-3 px-6">
       <div className="hidden md:flex space-x-4 bg-white text-black">
         {menuList.map((menu, idx) => {
           const isActive = location.pathname === menu.route;
