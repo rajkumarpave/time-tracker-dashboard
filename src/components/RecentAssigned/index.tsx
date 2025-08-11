@@ -57,7 +57,7 @@ function RecentAssigned() {
     {
       label: "Actions",
       field: "actions",
-      render: (value: any, row: any) => (
+      render: () => (
         <div className="flex items-center justify-center gap-2">
           <AppButton variant="text">
             <AiOutlinePlayCircle size={25} />
